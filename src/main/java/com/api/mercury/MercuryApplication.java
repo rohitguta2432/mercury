@@ -8,5 +8,4 @@ public class MercuryApplication {
     public static void main(String[] args) {
         SpringApplication.run(MercuryApplication.class, args);
     }
-
 }
