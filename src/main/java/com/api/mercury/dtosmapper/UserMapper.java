@@ -13,19 +13,19 @@ import java.util.List;
 public interface UserMapper {
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
+/*    @Mapping(source = "userId",target = "id")
+    @Mapping(source = "userFirstName",target = "firstName")
+    @Mapping(source = "userLastName",target = "lastName")
+    UserDTO userListToUserDTO(List<Users> users);*/
+
     @Mapping(source = "userId",target = "id")
     @Mapping(source = "userFirstName",target = "firstName")
     @Mapping(source = "userLastName",target = "lastName")
-    UserDTO userListToUserDTO(List<Users> users);
+    Users UserDtoToUser(UserDTO userDTO);
 
     @Mapping(source = "id",target = "userId")
     @Mapping(source = "firstName",target = "userFirstName")
     @Mapping(source = "lastName",target = "userLastName")
-    Users UserDtoToUser(UserDTO userDTO);
-
-    @Mapping(source = "userId",target = "id")
-    @Mapping(source = "firstName",target = "UserFirstName")
-    @Mapping(source = "lastName",target = "UserLastName")
     UserDTO userToUserDTO(Users user);
 
 }

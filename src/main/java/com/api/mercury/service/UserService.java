@@ -16,10 +16,10 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List<UserDTO> getAllUsers() {
+   /* public List<UserDTO> getAllUsers() {
         log.info("fetching all users ");
         return (List<UserDTO>) UserMapper.INSTANCE.userListToUserDTO(userRepository.findAll());
-    }
+    }*/
 
     public UserDTO save(UserDTO userDTO) {
         log.info("save user");
